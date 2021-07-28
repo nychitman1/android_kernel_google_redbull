@@ -71,6 +71,8 @@ struct usbnet {
 
 	struct work_struct	kevent;
 	unsigned long		flags;
+	u32			rx_speed;	/* in bps - NOT Mbps */
+	u32			tx_speed;	/* in bps - NOT Mbps */
 #		define EVENT_TX_HALT	0
 #		define EVENT_RX_HALT	1
 #		define EVENT_RX_MEMORY	2
